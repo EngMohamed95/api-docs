@@ -1,0 +1,4908 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "IntegrationAPI",
+    "contact": {},
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://erp2.matixerp.com/"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ],
+  "paths": {
+    "/users/Login": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Login",
+        "operationId": "Login",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "Bearer {token}"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "x-codegen-request-body-name": "Body"
+      }
+    },
+    "/Integration/getAnalyticalCenters": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "AnalyticalCenters",
+        "operationId": "AnalyticalCenters",
+        "parameters": [
+          {
+            "name": "subsidaryId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": []
+      }
+    },
+    "/Integration/getCostCenters": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "CostCenters",
+        "operationId": "CostCenters",
+        "parameters": [
+          {
+            "name": "subid",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "SearchValue",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": []
+      }
+    },
+    "/Integration/getDepartments": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Departments",
+        "operationId": "Departments",
+        "parameters": [
+          {
+            "name": "SubsidiaryID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageNo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "SearchValue",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": []
+      }
+    },
+    "/Integration/getDivisions": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Divisions",
+        "operationId": "Divisions",
+        "parameters": [
+          {
+            "name": "SubsidiaryID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageNo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "SearchValue",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": []
+      }
+    },
+    "/Integration/getClasses": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Classes",
+        "operationId": "Classes",
+        "parameters": [
+          {
+            "name": "SubsidiaryID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageNo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "SearchValue",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": []
+      }
+    },
+    "/Integration/getLocations": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Locations",
+        "operationId": "Locations",
+        "parameters": [
+          {
+            "name": "SubsidiaryID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageNo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "SearchValue",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": []
+      }
+    },
+    "/Integration/insertDepartment": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "InsertDepartment",
+        "operationId": "InsertDepartment",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertDepartmentRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-codegen-request-body-name": "Body"
+      }
+    },
+    "/Integration/insertDivision": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "InsertDivision",
+        "operationId": "InsertDivision",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertDivisionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-codegen-request-body-name": "Body"
+      }
+    },
+    "/Integration/insertClass": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "InsertClass",
+        "operationId": "InsertClass",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertClassRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-codegen-request-body-name": "Body"
+      }
+    },
+    "/Integration/insertLocation": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "InsertLocation",
+        "operationId": "InsertLocation",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertLocationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-codegen-request-body-name": "Body"
+      }
+    },
+    "/Integration/insertSubCostCenterByParentId": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "InsertSubCostCenterByParentId",
+        "operationId": "InsertSubCostCenterByParentId",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertSubCostCenterByParentIdRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-codegen-request-body-name": "Body"
+      }
+    },
+    "/Integration/insertJournalVoucherForThirdParty": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "InsertJournalVoucher",
+        "operationId": "InsertJournalVoucher",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertJournalVoucherRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-codegen-request-body-name": "Body"
+      }
+    },
+    "/Integration/updateJournalVoucherForThirdParty": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "UpdateJournalVoucher",
+        "operationId": "UpdateJournalVoucher",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateJournalVoucherRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-codegen-request-body-name": "Body"
+      }
+    },
+    "/Integration/deleteJournalVoucherForThirdParty": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "DeleteJournalVoucher",
+        "operationId": "DeleteJournalVoucher",
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "VouhcerDate",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SubsidaryID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": []
+      }
+    },
+    "/Integration/insertReceiptVoucherForThirdParty": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "InsertReceiptVoucher",
+        "operationId": "InsertReceiptVoucher",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertReceiptVoucherRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-codegen-request-body-name": "Body"
+      }
+    },
+    "/Integration/updateReceiptVoucherForThirdParty": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "UpdateReceiptVoucher",
+        "operationId": "UpdateReceiptVoucher",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateReceiptVoucherRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-codegen-request-body-name": "Body"
+      }
+    },
+    "/Integration/deleteReceiptVoucherForThirdParty": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "DeleteReceiptVoucher",
+        "operationId": "DeleteReceiptVoucher",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "Bearer {token}"
+            }
+          },
+          {
+            "name": "ID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "VouhcerDate",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SubsidaryID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Integration/insertPaymentVoucherForThirdParty": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "InsertPaymentVoucher",
+        "operationId": "InsertPaymentVoucher",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertPaymentVoucherRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-codegen-request-body-name": "Body"
+      }
+    },
+    "/Integration/updatePaymentVoucherForThirdParty": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "UpdatePaymentVoucher",
+        "operationId": "UpdatePaymentVoucher",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePaymentVoucherRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-codegen-request-body-name": "Body"
+      }
+    },
+    "/Integration/deletePaymentVoucherForThirdParty": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "DeletePaymentVoucher",
+        "operationId": "DeletePaymentVoucher",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "Bearer {token}"
+            }
+          },
+          {
+            "name": "ID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "VouhcerDate",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SubsidaryID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Integration/insertCheckVoucherForThirdParty": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "InsertCheckVoucher",
+        "operationId": "InsertCheckVoucher",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertCheckVoucherRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-codegen-request-body-name": "Body"
+      }
+    },
+    "/Integration/updateCheckVoucherForThirdParty": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "UpdateCheckVoucher",
+        "operationId": "UpdateCheckVoucher",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCheckVoucherRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-codegen-request-body-name": "Body"
+      }
+    },
+    "/Integration/deleteCheckVoucherForThirdParty": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "DeleteCheckVoucher",
+        "operationId": "DeleteCheckVoucher",
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "VouhcerDate",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SubsidaryID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": []
+      }
+    },
+    "/Integration/insertMoneyTransferVoucherForThirdParty": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "InsertMoneyTransferVoucher",
+        "operationId": "InsertMoneyTransferVoucher",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertMoneyTransferVoucherRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-codegen-request-body-name": "Body"
+      }
+    },
+    "/Integration/updateMoneyTransferVoucherForThirdParty": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "UpdateMoneyTransferVoucher",
+        "operationId": "UpdateMoneyTransferVoucher",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMoneyTransferVoucherRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-codegen-request-body-name": "Body"
+      }
+    },
+    "/Integration/deleteMoneyTransferVoucherForThirdParty": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "DeleteMoneyTransferVoucher",
+        "operationId": "DeleteMoneyTransferVoucher",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "Bearer {token}"
+            }
+          },
+          {
+            "name": "ID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "VouhcerDate",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SubsidaryID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Integration/changeVoucherStatus": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "ChangeVoucherStatus",
+        "operationId": "ChangeVoucherStatus",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "posted",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": []
+      }
+    },
+    "/Integration/getAccounts": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "GetAccounts",
+        "operationId": "GetAccounts",
+        "parameters": [
+          {
+            "name": "SubsidiaryId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": []
+      }
+    },
+    "/Integration/getStatementOfAccount": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "StatementOfAccount",
+        "operationId": "StatementOfAccount",
+        "parameters": [
+          {
+            "name": "AccountID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "CostcenterID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "BranchID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "SubsidaryID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": []
+      }
+    },
+    "/Integration/getMainStatementOfAccount": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "MainStatementOfAccount",
+        "operationId": "MainStatementOfAccount",
+        "parameters": [
+          {
+            "name": "AccountID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "CostcenterID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "BranchID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "SubsidaryID",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": []
+      }
+    },
+    "/Integration/insertCatchASiteVoucherForThirdParty": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "insertCatchASiteVoucherForThirdParty",
+        "operationId": "insertCatchASiteVoucherForThirdParty",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/insertCatchASiteVoucherForThirdPartyRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-codegen-request-body-name": "Body"
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "LoginRequest": {
+        "title": "LoginRequest",
+        "required": [
+          "confirmed",
+          "domain",
+          "password",
+          "username"
+        ],
+        "type": "object",
+        "properties": {
+          "domain": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "confirmed": {
+            "type": "boolean"
+          }
+        },
+        "example": {
+          "domain": "test",
+          "username": "admin",
+          "password": "admin",
+          "confirmed": false
+        }
+      },
+      "InsertDepartmentRequest": {
+        "title": "InsertDepartmentRequest",
+        "required": [
+          "Code",
+          "ID",
+          "IsActive",
+          "Name",
+          "Name_AR",
+          "Subsidaryid"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "Code": {
+            "type": "string"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "Name_AR": {
+            "type": "string"
+          },
+          "Subsidaryid": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "ID": 0,
+          "Name": "test",
+          "Code": "2",
+          "IsActive": true,
+          "Name_AR": "test",
+          "Subsidaryid": "1"
+        }
+      },
+      "InsertDivisionRequest": {
+        "title": "InsertDivisionRequest",
+        "required": [
+          "Code",
+          "ID",
+          "IsActive",
+          "Name",
+          "Name_AR",
+          "Subsidaryid"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "Code": {
+            "type": "string"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "Name_AR": {
+            "type": "string"
+          },
+          "Subsidaryid": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "ID": 0,
+          "Name": "test",
+          "Code": "2",
+          "IsActive": true,
+          "Name_AR": "test",
+          "Subsidaryid": "1"
+        }
+      },
+      "InsertClassRequest": {
+        "title": "InsertClassRequest",
+        "required": [
+          "Code",
+          "ID",
+          "IsActive",
+          "Name",
+          "Name_AR",
+          "Subsidaryid"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "Code": {
+            "type": "string"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "Name_AR": {
+            "type": "string"
+          },
+          "Subsidaryid": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "ID": 0,
+          "Name": "test",
+          "Code": "2",
+          "IsActive": true,
+          "Name_AR": "test",
+          "Subsidaryid": "1"
+        }
+      },
+      "InsertLocationRequest": {
+        "title": "InsertLocationRequest",
+        "required": [
+          "Code",
+          "ID",
+          "IsActive",
+          "Name",
+          "Name_AR",
+          "Subsidaryid"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "Code": {
+            "type": "string"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "Name_AR": {
+            "type": "string"
+          },
+          "Subsidaryid": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "ID": 0,
+          "Name": "test",
+          "Code": "2",
+          "IsActive": true,
+          "Name_AR": "test",
+          "Subsidaryid": "1"
+        }
+      },
+      "InsertSubCostCenterByParentIdRequest": {
+        "title": "InsertSubCostCenterByParentIdRequest",
+        "required": [
+          "Code",
+          "enddate",
+          "isActive",
+          "levelNo",
+          "name",
+          "name_AR",
+          "parentID",
+          "startdate",
+          "subsidaryid",
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "startdate": {
+            "type": "string"
+          },
+          "enddate": {
+            "type": "string"
+          },
+          "type": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "parentID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "levelNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Code": {
+            "type": "string"
+          },
+          "subsidaryid": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "name_AR": {
+            "type": "string"
+          },
+          "isActive": {
+            "type": "boolean"
+          }
+        },
+        "example": {
+          "startdate": "2023-02-12T00:00:00.000Z",
+          "enddate": "2023-02-15T00:00:00.000Z",
+          "type": 2,
+          "parentID": 2152,
+          "levelNo": 2,
+          "Code": "2",
+          "subsidaryid": "1",
+          "name": "test",
+          "name_AR": "test",
+          "isActive": true
+        }
+      },
+      "InsertJournalVoucherRequest": {
+        "title": "InsertJournalVoucherRequest",
+        "required": [
+          "Approved",
+          "BankName",
+          "Beneficiary",
+          "BranchID",
+          "CashDrawerId",
+          "CheckNumber",
+          "CheeckBookID",
+          "ClassificationCategoryID",
+          "Code",
+          "CollecterId",
+          "CollectionBookId",
+          "CollectionNumber",
+          "CurrencyID",
+          "DeferEntry",
+          "DueDate",
+          "ExchangeRate",
+          "ID",
+          "InvoiceInstallmentsDetailsId",
+          "IsActive",
+          "IsPosExpanceVoucher",
+          "Memo",
+          "PaidAmount",
+          "PaymentTypeId",
+          "Posted",
+          "Prepaid",
+          "ReceiptID",
+          "ReferanceNo",
+          "Service",
+          "SubContractorContractCode",
+          "SubContractorContractID",
+          "SubsidaryID",
+          "VoucherDetails",
+          "VoucherTypeID",
+          "VouhcerDate",
+          "WorkItemCode",
+          "WorkItemID",
+          "links"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "BranchID": {
+            "type": "string"
+          },
+          "Posted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "CurrencyID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ClassificationCategoryID": {
+            "type": "string"
+          },
+          "WorkItemID": {
+            "type": "string"
+          },
+          "WorkItemCode": {
+            "type": "string"
+          },
+          "SubContractorContractID": {
+            "type": "string"
+          },
+          "ExchangeRate": {
+            "type": "string"
+          },
+          "VoucherDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VoucherDetail"
+            }
+          },
+          "Service": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "Approved": {
+            "type": "boolean"
+          },
+          "DeferEntry": {
+            "type": "boolean"
+          },
+          "PaymentTypeId": {
+            "type": "string"
+          },
+          "PaidAmount": {
+            "type": "string"
+          },
+          "CashDrawerId": {
+            "type": "string"
+          },
+          "IsPosExpanceVoucher": {
+            "type": "boolean"
+          },
+          "Prepaid": {
+            "type": "string"
+          },
+          "CollectionBookId": {
+            "type": "string"
+          },
+          "CollecterId": {
+            "type": "string"
+          },
+          "CollectionNumber": {
+            "type": "string"
+          },
+          "CheeckBookID": {
+            "type": "string"
+          },
+          "DueDate": {
+            "type": "string"
+          },
+          "ReceiptID": {
+            "type": "string"
+          },
+          "InvoiceInstallmentsDetailsId": {
+            "type": "string"
+          },
+          "SubsidaryID": {
+            "type": "string"
+          },
+          "Code": {
+            "type": "string"
+          },
+          "VoucherTypeID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "VouhcerDate": {
+            "type": "string"
+          },
+          "ReferanceNo": {
+            "type": "string"
+          },
+          "Memo": {
+            "type": "string"
+          },
+          "Beneficiary": {
+            "type": "string"
+          },
+          "BankName": {
+            "type": "string"
+          },
+          "CheckNumber": {
+            "type": "string"
+          },
+          "SubContractorContractCode": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "ID": 0,
+          "BranchID": "46",
+          "Posted": 0,
+          "IsActive": true,
+          "CurrencyID": 42,
+          "ExchangeRate": "1.000000000",
+          "VoucherDetails": [
+            {
+              "AccountNoID": 9904,
+              "Debit": "100.000",
+              "Credit": 0,
+              "DebitForeign": "0.000",
+              "CreditForeign": 0,
+              "IsActive": true,
+              "Reconciled": false,
+              "Cleared": false,
+              "Accountcode": "",
+              "Header": false,
+              "accountName": "الصندوق الرئيسي",
+              "Memo": "",
+              "isMemoEdit": false,
+              "Order": 0
+            },
+            {
+              "AccountNoID": 14849,
+              "Debit": 0,
+              "Credit": "100.000",
+              "DebitForeign": 0,
+              "CreditForeign": 0,
+              "IsActive": true,
+              "Reconciled": false,
+              "Cleared": false,
+              "Accountcode": "",
+              "Header": false,
+              "accountName": "صندوق فرعى",
+              "Memo": "",
+              "isMemoEdit": false,
+              "Order": 1
+            }
+          ],
+          "Service": [],
+          "links": [],
+          "Approved": false,
+          "DeferEntry": false,
+          "IsPosExpanceVoucher": false,
+          "CollectionNumber": "",
+          "SubsidaryID": "1",
+          "Code": "10411122041111180",
+          "VoucherTypeID": 1,
+          "VouhcerDate": "2023-02-12",
+          "ReferanceNo": "",
+          "Memo": "",
+          "Beneficiary": "الصندوق الرئيسي",
+          "BankName": "",
+          "CheckNumber": ""
+        }
+      },
+      "VoucherDetail": {
+        "title": "VoucherDetail",
+        "required": [
+          "AccountNoID",
+          "Accountcode",
+          "ClassID",
+          "Cleared",
+          "CostcenterID",
+          "Credit",
+          "CreditForeign",
+          "Debit",
+          "DebitForeign",
+          "DepartmentID",
+          "DivisionID",
+          "Header",
+          "ID",
+          "IsActive",
+          "LocationID",
+          "Memo",
+          "Order",
+          "Reconciled",
+          "VoucherID",
+          "accountName",
+          "isMemoEdit"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "string"
+          },
+          "VoucherID": {
+            "type": "string"
+          },
+          "CostcenterID": {
+            "type": "string"
+          },
+          "AccountNoID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Debit": {
+            "type": "object"
+          },
+          "Credit": {
+            "type": "object"
+          },
+          "DebitForeign": {
+            "type": "object"
+          },
+          "CreditForeign": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "LocationID": {
+            "type": "string"
+          },
+          "DepartmentID": {
+            "type": "string"
+          },
+          "ClassID": {
+            "type": "string"
+          },
+          "Reconciled": {
+            "type": "boolean"
+          },
+          "Cleared": {
+            "type": "boolean"
+          },
+          "Accountcode": {
+            "type": "string"
+          },
+          "Header": {
+            "type": "boolean"
+          },
+          "DivisionID": {
+            "type": "string"
+          },
+          "accountName": {
+            "type": "string"
+          },
+          "Memo": {
+            "type": "string"
+          },
+          "isMemoEdit": {
+            "type": "boolean"
+          },
+          "Order": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "AccountNoID": 9904,
+          "Debit": "100.000",
+          "Credit": 0,
+          "DebitForeign": "0.000",
+          "CreditForeign": 0,
+          "IsActive": true,
+          "Reconciled": false,
+          "Cleared": false,
+          "Accountcode": "",
+          "Header": false,
+          "accountName": "الصندوق الرئيسي",
+          "Memo": "",
+          "isMemoEdit": false,
+          "Order": 0
+        }
+      },
+      "UpdateJournalVoucherRequest": {
+        "title": "UpdateJournalVoucherRequest",
+        "required": [
+          "Approved",
+          "BankName",
+          "Beneficiary",
+          "BranchID",
+          "CashDrawerId",
+          "CheckNumber",
+          "CheeckBookID",
+          "ClassificationCategoryID",
+          "Code",
+          "CollecterId",
+          "CollectionBookId",
+          "CollectionNumber",
+          "CurrencyID",
+          "DeferEntry",
+          "DueDate",
+          "ExchangeRate",
+          "ID",
+          "InvoiceInstallmentsDetailsId",
+          "IsActive",
+          "IsPosExpanceVoucher",
+          "Memo",
+          "PaidAmount",
+          "PaymentTypeId",
+          "Posted",
+          "Prepaid",
+          "ReceiptID",
+          "ReferanceNo",
+          "Service",
+          "SubContractorContractCode",
+          "SubContractorContractID",
+          "SubsidaryID",
+          "VoucherDetails",
+          "VoucherTypeID",
+          "VouhcerDate",
+          "WorkItemCode",
+          "WorkItemID",
+          "links"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "BranchID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Posted": {
+            "type": "boolean"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "CurrencyID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ClassificationCategoryID": {
+            "type": "string"
+          },
+          "WorkItemID": {
+            "type": "string"
+          },
+          "WorkItemCode": {
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/WorkItemCode"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          },
+          "SubContractorContractID": {
+            "type": "string"
+          },
+          "ExchangeRate": {
+            "type": "string"
+          },
+          "VoucherDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VoucherDetail1"
+            }
+          },
+          "Service": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "Approved": {
+            "type": "boolean"
+          },
+          "DeferEntry": {
+            "type": "boolean"
+          },
+          "PaymentTypeId": {
+            "type": "string"
+          },
+          "PaidAmount": {
+            "type": "string"
+          },
+          "CashDrawerId": {
+            "type": "string"
+          },
+          "IsPosExpanceVoucher": {
+            "type": "boolean"
+          },
+          "Prepaid": {
+            "type": "string"
+          },
+          "CollectionBookId": {
+            "type": "string"
+          },
+          "CollecterId": {
+            "type": "string"
+          },
+          "CollectionNumber": {
+            "type": "string"
+          },
+          "CheeckBookID": {
+            "type": "string"
+          },
+          "DueDate": {
+            "type": "string"
+          },
+          "ReceiptID": {
+            "type": "string"
+          },
+          "InvoiceInstallmentsDetailsId": {
+            "type": "string"
+          },
+          "SubsidaryID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Code": {
+            "type": "string"
+          },
+          "VoucherTypeID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "VouhcerDate": {
+            "type": "string"
+          },
+          "ReferanceNo": {
+            "type": "string"
+          },
+          "Memo": {
+            "type": "string"
+          },
+          "Beneficiary": {
+            "type": "string"
+          },
+          "BankName": {
+            "type": "string"
+          },
+          "CheckNumber": {
+            "type": "string"
+          },
+          "SubContractorContractCode": {
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SubContractorContractCode"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          }
+        },
+        "example": {
+          "ID": 396715,
+          "BranchID": 46,
+          "Posted": true,
+          "IsActive": true,
+          "CurrencyID": 42,
+          "WorkItemCode": {},
+          "ExchangeRate": "1.000000000",
+          "VoucherDetails": [
+            {
+              "ID": 956201,
+              "VoucherID": 396715,
+              "AccountNoID": 9904,
+              "Debit": "500.000",
+              "Credit": 0,
+              "DebitForeign": "500.000",
+              "CreditForeign": 0,
+              "IsActive": true,
+              "Reconciled": false,
+              "Cleared": false,
+              "Accountcode": "",
+              "Header": false,
+              "accountName": "الصندوق الرئيسي",
+              "Memo": "",
+              "isMemoEdit": false,
+              "Order": 0
+            },
+            {
+              "ID": 956202,
+              "VoucherID": 396715,
+              "AccountNoID": 14849,
+              "Debit": 0,
+              "Credit": "500.000",
+              "DebitForeign": 0,
+              "CreditForeign": "500.000",
+              "IsActive": true,
+              "Reconciled": false,
+              "Cleared": false,
+              "Accountcode": "",
+              "Header": false,
+              "accountName": "صندوق فرعى",
+              "Memo": "",
+              "isMemoEdit": false,
+              "Order": 1
+            }
+          ],
+          "Service": [],
+          "links": [],
+          "Approved": false,
+          "DeferEntry": false,
+          "IsPosExpanceVoucher": false,
+          "CollectionNumber": "",
+          "DueDate": "1970-01-01",
+          "SubsidaryID": 1,
+          "Code": "10411122041111181",
+          "VoucherTypeID": 1,
+          "VouhcerDate": "2023-02-12",
+          "ReferanceNo": "",
+          "Memo": "",
+          "Beneficiary": "الصندوق الرئيسي",
+          "BankName": "",
+          "CheckNumber": "",
+          "SubContractorContractCode": {}
+        }
+      },
+      "WorkItemCode": {
+        "title": "WorkItemCode",
+        "required": [
+          "contract_no"
+        ],
+        "type": "object",
+        "properties": {
+          "contract_no": {
+            "type": "string"
+          }
+        },
+        "example": {}
+      },
+      "VoucherDetail1": {
+        "title": "VoucherDetail1",
+        "required": [
+          "AccountNoID",
+          "Accountcode",
+          "ClassID",
+          "Cleared",
+          "CostcenterID",
+          "Credit",
+          "CreditForeign",
+          "Debit",
+          "DebitForeign",
+          "DepartmentID",
+          "DivisionID",
+          "Header",
+          "ID",
+          "IsActive",
+          "LocationID",
+          "Memo",
+          "Order",
+          "Reconciled",
+          "VoucherID",
+          "accountName",
+          "isMemoEdit"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "VoucherID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "CostcenterID": {
+            "type": "string"
+          },
+          "AccountNoID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Debit": {
+            "type": "object"
+          },
+          "Credit": {
+            "type": "object"
+          },
+          "DebitForeign": {
+            "type": "object"
+          },
+          "CreditForeign": {
+            "type": "object"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "LocationID": {
+            "type": "string"
+          },
+          "DepartmentID": {
+            "type": "string"
+          },
+          "ClassID": {
+            "type": "string"
+          },
+          "Reconciled": {
+            "type": "boolean"
+          },
+          "Cleared": {
+            "type": "boolean"
+          },
+          "Accountcode": {
+            "type": "string"
+          },
+          "Header": {
+            "type": "boolean"
+          },
+          "DivisionID": {
+            "type": "string"
+          },
+          "accountName": {
+            "type": "string"
+          },
+          "Memo": {
+            "type": "string"
+          },
+          "isMemoEdit": {
+            "type": "boolean"
+          },
+          "Order": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "ID": 956201,
+          "VoucherID": 396715,
+          "AccountNoID": 9904,
+          "Debit": "500.000",
+          "Credit": 0,
+          "DebitForeign": "500.000",
+          "CreditForeign": 0,
+          "IsActive": true,
+          "Reconciled": false,
+          "Cleared": false,
+          "Accountcode": "",
+          "Header": false,
+          "accountName": "الصندوق الرئيسي",
+          "Memo": "",
+          "isMemoEdit": false,
+          "Order": 0
+        }
+      },
+      "SubContractorContractCode": {
+        "title": "SubContractorContractCode",
+        "required": [
+          "code"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          }
+        },
+        "example": {}
+      },
+      "InsertReceiptVoucherRequest": {
+        "title": "InsertReceiptVoucherRequest",
+        "required": [
+          "Approved",
+          "BankName",
+          "Beneficiary",
+          "BranchID",
+          "CashDrawerId",
+          "CheckNumber",
+          "CheeckBookID",
+          "ClassificationCategoryID",
+          "Code",
+          "CollecterId",
+          "CollectionBookId",
+          "CollectionNumber",
+          "CurrencyID",
+          "DeferEntry",
+          "DueDate",
+          "ExchangeRate",
+          "ID",
+          "InvoiceInstallmentsDetailsId",
+          "IsActive",
+          "IsPosExpanceVoucher",
+          "Memo",
+          "PaidAmount",
+          "PaymentTypeId",
+          "Posted",
+          "Prepaid",
+          "ReceiptID",
+          "ReferanceNo",
+          "Service",
+          "SubContractorContractCode",
+          "SubContractorContractID",
+          "SubsidaryID",
+          "VoucherDetails",
+          "VoucherTypeID",
+          "VouhcerDate",
+          "WorkItemCode",
+          "WorkItemID",
+          "links"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "BranchID": {
+            "type": "string"
+          },
+          "Posted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "CurrencyID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ClassificationCategoryID": {
+            "type": "string"
+          },
+          "WorkItemID": {
+            "type": "string"
+          },
+          "WorkItemCode": {
+            "type": "string"
+          },
+          "SubContractorContractID": {
+            "type": "string"
+          },
+          "ExchangeRate": {
+            "type": "string"
+          },
+          "VoucherDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VoucherDetail2"
+            }
+          },
+          "Service": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "Approved": {
+            "type": "boolean"
+          },
+          "DeferEntry": {
+            "type": "boolean"
+          },
+          "PaymentTypeId": {
+            "type": "string"
+          },
+          "PaidAmount": {
+            "type": "string"
+          },
+          "CashDrawerId": {
+            "type": "string"
+          },
+          "IsPosExpanceVoucher": {
+            "type": "boolean"
+          },
+          "Prepaid": {
+            "type": "string"
+          },
+          "CollectionBookId": {
+            "type": "string"
+          },
+          "CollecterId": {
+            "type": "string"
+          },
+          "CollectionNumber": {
+            "type": "string"
+          },
+          "CheeckBookID": {
+            "type": "string"
+          },
+          "DueDate": {
+            "type": "string"
+          },
+          "ReceiptID": {
+            "type": "string"
+          },
+          "InvoiceInstallmentsDetailsId": {
+            "type": "string"
+          },
+          "SubsidaryID": {
+            "type": "string"
+          },
+          "Code": {
+            "type": "string"
+          },
+          "VoucherTypeID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "VouhcerDate": {
+            "type": "string"
+          },
+          "ReferanceNo": {
+            "type": "string"
+          },
+          "Memo": {
+            "type": "string"
+          },
+          "Beneficiary": {
+            "type": "string"
+          },
+          "BankName": {
+            "type": "string"
+          },
+          "CheckNumber": {
+            "type": "string"
+          },
+          "SubContractorContractCode": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "ID": 0,
+          "BranchID": "46",
+          "Posted": 1,
+          "IsActive": true,
+          "CurrencyID": 42,
+          "ExchangeRate": "1.000000000",
+          "VoucherDetails": [
+            {
+              "AccountNoID": 9904,
+              "Debit": "500.000",
+              "Credit": 0,
+              "DebitForeign": "0.000",
+              "CreditForeign": 0,
+              "IsActive": true,
+              "Reconciled": false,
+              "Cleared": false,
+              "Accountcode": "",
+              "Header": true,
+              "accountName": "الصندوق الرئيسي",
+              "Memo": "",
+              "isMemoEdit": false,
+              "Order": 0
+            },
+            {
+              "AccountNoID": 14849,
+              "Debit": 0,
+              "Credit": "500.000",
+              "DebitForeign": 0,
+              "CreditForeign": "0.000",
+              "IsActive": true,
+              "Reconciled": false,
+              "Cleared": false,
+              "Accountcode": "",
+              "Header": false,
+              "accountName": "صندوق فرعى",
+              "Memo": "",
+              "isMemoEdit": false,
+              "Order": 1
+            }
+          ],
+          "Service": [],
+          "links": [],
+          "Approved": false,
+          "DeferEntry": false,
+          "IsPosExpanceVoucher": false,
+          "CollectionNumber": "",
+          "SubsidaryID": "1",
+          "Code": "1041112204111126",
+          "VoucherTypeID": 3,
+          "VouhcerDate": "2023-02-19",
+          "ReferanceNo": "",
+          "Memo": "",
+          "Beneficiary": "صندوق فرعى",
+          "BankName": "",
+          "CheckNumber": ""
+        }
+      },
+      "VoucherDetail2": {
+        "title": "VoucherDetail2",
+        "required": [
+          "AccountNoID",
+          "Accountcode",
+          "ClassID",
+          "Cleared",
+          "CostcenterID",
+          "Credit",
+          "CreditForeign",
+          "Debit",
+          "DebitForeign",
+          "DepartmentID",
+          "DivisionID",
+          "Header",
+          "ID",
+          "IsActive",
+          "LocationID",
+          "Memo",
+          "Order",
+          "Reconciled",
+          "VoucherID",
+          "accountName",
+          "isMemoEdit"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "string"
+          },
+          "VoucherID": {
+            "type": "string"
+          },
+          "CostcenterID": {
+            "type": "string"
+          },
+          "AccountNoID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Debit": {
+            "type": "object"
+          },
+          "Credit": {
+            "type": "object"
+          },
+          "DebitForeign": {
+            "type": "object"
+          },
+          "CreditForeign": {
+            "type": "object"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "LocationID": {
+            "type": "string"
+          },
+          "DepartmentID": {
+            "type": "string"
+          },
+          "ClassID": {
+            "type": "string"
+          },
+          "Reconciled": {
+            "type": "boolean"
+          },
+          "Cleared": {
+            "type": "boolean"
+          },
+          "Accountcode": {
+            "type": "string"
+          },
+          "Header": {
+            "type": "boolean"
+          },
+          "DivisionID": {
+            "type": "string"
+          },
+          "accountName": {
+            "type": "string"
+          },
+          "Memo": {
+            "type": "string"
+          },
+          "isMemoEdit": {
+            "type": "boolean"
+          },
+          "Order": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "AccountNoID": 9904,
+          "Debit": "500.000",
+          "Credit": 0,
+          "DebitForeign": "0.000",
+          "CreditForeign": 0,
+          "IsActive": true,
+          "Reconciled": false,
+          "Cleared": false,
+          "Accountcode": "",
+          "Header": true,
+          "accountName": "الصندوق الرئيسي",
+          "Memo": "",
+          "isMemoEdit": false,
+          "Order": 0
+        }
+      },
+      "UpdateReceiptVoucherRequest": {
+        "title": "UpdateReceiptVoucherRequest",
+        "required": [
+          "Approved",
+          "BankName",
+          "Beneficiary",
+          "BranchID",
+          "CashDrawerId",
+          "CheckNumber",
+          "CheeckBookID",
+          "ClassificationCategoryID",
+          "Code",
+          "CollecterId",
+          "CollectionBookId",
+          "CollectionNumber",
+          "CurrencyID",
+          "DeferEntry",
+          "DueDate",
+          "ExchangeRate",
+          "ID",
+          "InvoiceInstallmentsDetailsId",
+          "IsActive",
+          "IsPosExpanceVoucher",
+          "Memo",
+          "PaidAmount",
+          "PaymentTypeId",
+          "Posted",
+          "Prepaid",
+          "ReceiptID",
+          "ReferanceNo",
+          "Service",
+          "SubContractorContractCode",
+          "SubContractorContractID",
+          "SubsidaryID",
+          "VoucherDetails",
+          "VoucherTypeID",
+          "VouhcerDate",
+          "WorkItemCode",
+          "WorkItemID",
+          "links"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "BranchID": {
+            "type": "string"
+          },
+          "Posted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "CurrencyID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ClassificationCategoryID": {
+            "type": "string"
+          },
+          "WorkItemID": {
+            "type": "string"
+          },
+          "WorkItemCode": {
+            "type": "string"
+          },
+          "SubContractorContractID": {
+            "type": "string"
+          },
+          "ExchangeRate": {
+            "type": "string"
+          },
+          "VoucherDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VoucherDetail2"
+            }
+          },
+          "Service": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "Approved": {
+            "type": "boolean"
+          },
+          "DeferEntry": {
+            "type": "boolean"
+          },
+          "PaymentTypeId": {
+            "type": "string"
+          },
+          "PaidAmount": {
+            "type": "string"
+          },
+          "CashDrawerId": {
+            "type": "string"
+          },
+          "IsPosExpanceVoucher": {
+            "type": "boolean"
+          },
+          "Prepaid": {
+            "type": "string"
+          },
+          "CollectionBookId": {
+            "type": "string"
+          },
+          "CollecterId": {
+            "type": "string"
+          },
+          "CollectionNumber": {
+            "type": "string"
+          },
+          "CheeckBookID": {
+            "type": "string"
+          },
+          "DueDate": {
+            "type": "string"
+          },
+          "ReceiptID": {
+            "type": "string"
+          },
+          "InvoiceInstallmentsDetailsId": {
+            "type": "string"
+          },
+          "SubsidaryID": {
+            "type": "string"
+          },
+          "Code": {
+            "type": "string"
+          },
+          "VoucherTypeID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "VouhcerDate": {
+            "type": "string"
+          },
+          "ReferanceNo": {
+            "type": "string"
+          },
+          "Memo": {
+            "type": "string"
+          },
+          "Beneficiary": {
+            "type": "string"
+          },
+          "BankName": {
+            "type": "string"
+          },
+          "CheckNumber": {
+            "type": "string"
+          },
+          "SubContractorContractCode": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "ID": 0,
+          "BranchID": "46",
+          "Posted": 1,
+          "IsActive": true,
+          "CurrencyID": 42,
+          "ExchangeRate": "1.000000000",
+          "VoucherDetails": [
+            {
+              "AccountNoID": 9904,
+              "Debit": "500.000",
+              "Credit": 0,
+              "DebitForeign": "0.000",
+              "CreditForeign": 0,
+              "IsActive": true,
+              "Reconciled": false,
+              "Cleared": false,
+              "Accountcode": "",
+              "Header": true,
+              "accountName": "الصندوق الرئيسي",
+              "Memo": "",
+              "isMemoEdit": false,
+              "Order": 0
+            },
+            {
+              "AccountNoID": 14849,
+              "Debit": 0,
+              "Credit": "500.000",
+              "DebitForeign": 0,
+              "CreditForeign": "0.000",
+              "IsActive": true,
+              "Reconciled": false,
+              "Cleared": false,
+              "Accountcode": "",
+              "Header": false,
+              "accountName": "صندوق فرعى",
+              "Memo": "",
+              "isMemoEdit": false,
+              "Order": 1
+            }
+          ],
+          "Service": [],
+          "links": [],
+          "Approved": false,
+          "DeferEntry": false,
+          "IsPosExpanceVoucher": false,
+          "CollectionNumber": "",
+          "SubsidaryID": "1",
+          "Code": "1041112204111126",
+          "VoucherTypeID": 3,
+          "VouhcerDate": "2023-02-19",
+          "ReferanceNo": "",
+          "Memo": "",
+          "Beneficiary": "صندوق فرعى",
+          "BankName": "",
+          "CheckNumber": ""
+        }
+      },
+      "InsertPaymentVoucherRequest": {
+        "title": "InsertPaymentVoucherRequest",
+        "required": [
+          "Approved",
+          "BankName",
+          "Beneficiary",
+          "BranchID",
+          "CashDrawerId",
+          "CheckNumber",
+          "CheeckBookID",
+          "ClassificationCategoryID",
+          "Code",
+          "CollecterId",
+          "CollectionBookId",
+          "CollectionNumber",
+          "CurrencyID",
+          "DeferEntry",
+          "DueDate",
+          "ExchangeRate",
+          "ID",
+          "InvoiceInstallmentsDetailsId",
+          "IsActive",
+          "IsPosExpanceVoucher",
+          "Memo",
+          "PaidAmount",
+          "PaymentTypeId",
+          "Posted",
+          "Prepaid",
+          "ReceiptID",
+          "ReferanceNo",
+          "Service",
+          "SubContractorContractCode",
+          "SubContractorContractID",
+          "SubsidaryID",
+          "VoucherDetails",
+          "VoucherTypeID",
+          "VouhcerDate",
+          "WorkItemCode",
+          "WorkItemID",
+          "links"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "BranchID": {
+            "type": "string"
+          },
+          "Posted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "CurrencyID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ClassificationCategoryID": {
+            "type": "string"
+          },
+          "WorkItemID": {
+            "type": "string"
+          },
+          "WorkItemCode": {
+            "type": "string"
+          },
+          "SubContractorContractID": {
+            "type": "string"
+          },
+          "ExchangeRate": {
+            "type": "string"
+          },
+          "VoucherDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VoucherDetail4"
+            }
+          },
+          "Service": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "Approved": {
+            "type": "boolean"
+          },
+          "DeferEntry": {
+            "type": "boolean"
+          },
+          "PaymentTypeId": {
+            "type": "string"
+          },
+          "PaidAmount": {
+            "type": "string"
+          },
+          "CashDrawerId": {
+            "type": "string"
+          },
+          "IsPosExpanceVoucher": {
+            "type": "boolean"
+          },
+          "Prepaid": {
+            "type": "string"
+          },
+          "CollectionBookId": {
+            "type": "string"
+          },
+          "CollecterId": {
+            "type": "string"
+          },
+          "CollectionNumber": {
+            "type": "string"
+          },
+          "CheeckBookID": {
+            "type": "string"
+          },
+          "DueDate": {
+            "type": "string"
+          },
+          "ReceiptID": {
+            "type": "string"
+          },
+          "InvoiceInstallmentsDetailsId": {
+            "type": "string"
+          },
+          "SubsidaryID": {
+            "type": "string"
+          },
+          "Code": {
+            "type": "string"
+          },
+          "VoucherTypeID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "VouhcerDate": {
+            "type": "string"
+          },
+          "ReferanceNo": {
+            "type": "string"
+          },
+          "Memo": {
+            "type": "string"
+          },
+          "Beneficiary": {
+            "type": "string"
+          },
+          "BankName": {
+            "type": "string"
+          },
+          "CheckNumber": {
+            "type": "string"
+          },
+          "SubContractorContractCode": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "ID": 0,
+          "BranchID": "46",
+          "Posted": 1,
+          "IsActive": true,
+          "CurrencyID": 42,
+          "ExchangeRate": "1.000000000",
+          "VoucherDetails": [
+            {
+              "AccountNoID": 9904,
+              "Debit": 0,
+              "Credit": "100.000",
+              "DebitForeign": 0,
+              "CreditForeign": "0.000",
+              "IsActive": true,
+              "Reconciled": false,
+              "Cleared": false,
+              "Accountcode": "",
+              "Header": true,
+              "accountName": "الصندوق الرئيسي",
+              "Memo": "",
+              "isMemoEdit": false,
+              "Order": 0
+            },
+            {
+              "AccountNoID": 14849,
+              "Debit": "100.000",
+              "Credit": 0,
+              "DebitForeign": "0.000",
+              "CreditForeign": 0,
+              "IsActive": true,
+              "Reconciled": false,
+              "Cleared": false,
+              "Accountcode": "",
+              "Header": false,
+              "accountName": "صندوق فرعى",
+              "Memo": "",
+              "isMemoEdit": false,
+              "Order": 1
+            }
+          ],
+          "Service": [],
+          "links": [],
+          "Approved": false,
+          "DeferEntry": false,
+          "IsPosExpanceVoucher": false,
+          "CollectionNumber": "",
+          "DueDate": "2023-02-20",
+          "SubsidaryID": "1",
+          "Code": "10411122041111180",
+          "VoucherTypeID": 4,
+          "VouhcerDate": "2023-02-20",
+          "ReferanceNo": "",
+          "Memo": "",
+          "Beneficiary": "صندوق فرعى",
+          "BankName": "",
+          "CheckNumber": ""
+        }
+      },
+      "VoucherDetail4": {
+        "title": "VoucherDetail4",
+        "required": [
+          "AccountNoID",
+          "Accountcode",
+          "ClassID",
+          "Cleared",
+          "CostcenterID",
+          "Credit",
+          "CreditForeign",
+          "Debit",
+          "DebitForeign",
+          "DepartmentID",
+          "DivisionID",
+          "Header",
+          "ID",
+          "IsActive",
+          "LocationID",
+          "Memo",
+          "Order",
+          "Reconciled",
+          "VoucherID",
+          "accountName",
+          "isMemoEdit"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "string"
+          },
+          "VoucherID": {
+            "type": "string"
+          },
+          "CostcenterID": {
+            "type": "string"
+          },
+          "AccountNoID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Debit": {
+            "type": "object"
+          },
+          "Credit": {
+            "type": "object"
+          },
+          "DebitForeign": {
+            "type": "object"
+          },
+          "CreditForeign": {
+            "type": "object"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "LocationID": {
+            "type": "string"
+          },
+          "DepartmentID": {
+            "type": "string"
+          },
+          "ClassID": {
+            "type": "string"
+          },
+          "Reconciled": {
+            "type": "boolean"
+          },
+          "Cleared": {
+            "type": "boolean"
+          },
+          "Accountcode": {
+            "type": "string"
+          },
+          "Header": {
+            "type": "boolean"
+          },
+          "DivisionID": {
+            "type": "string"
+          },
+          "accountName": {
+            "type": "string"
+          },
+          "Memo": {
+            "type": "string"
+          },
+          "isMemoEdit": {
+            "type": "boolean"
+          },
+          "Order": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "AccountNoID": 9904,
+          "Debit": 0,
+          "Credit": "100.000",
+          "DebitForeign": 0,
+          "CreditForeign": "0.000",
+          "IsActive": true,
+          "Reconciled": false,
+          "Cleared": false,
+          "Accountcode": "",
+          "Header": true,
+          "accountName": "الصندوق الرئيسي",
+          "Memo": "",
+          "isMemoEdit": false,
+          "Order": 0
+        }
+      },
+      "UpdatePaymentVoucherRequest": {
+        "title": "UpdatePaymentVoucherRequest",
+        "required": [
+          "Approved",
+          "BankName",
+          "Beneficiary",
+          "BranchID",
+          "CashDrawerId",
+          "CheckNumber",
+          "CheeckBookID",
+          "ClassificationCategoryID",
+          "Code",
+          "CollecterId",
+          "CollectionBookId",
+          "CollectionNumber",
+          "CurrencyID",
+          "DeferEntry",
+          "DueDate",
+          "ExchangeRate",
+          "ID",
+          "InvoiceInstallmentsDetailsId",
+          "IsActive",
+          "IsPosExpanceVoucher",
+          "Memo",
+          "PaidAmount",
+          "PaymentTypeId",
+          "Posted",
+          "Prepaid",
+          "ReceiptID",
+          "ReferanceNo",
+          "Service",
+          "SubContractorContractCode",
+          "SubContractorContractID",
+          "SubsidaryID",
+          "VoucherDetails",
+          "VoucherTypeID",
+          "VouhcerDate",
+          "WorkItemCode",
+          "WorkItemID",
+          "links"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "BranchID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Posted": {
+            "type": "boolean"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "CurrencyID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ClassificationCategoryID": {
+            "type": "string"
+          },
+          "WorkItemID": {
+            "type": "string"
+          },
+          "WorkItemCode": {
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/WorkItemCode"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          },
+          "SubContractorContractID": {
+            "type": "string"
+          },
+          "ExchangeRate": {
+            "type": "string"
+          },
+          "VoucherDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VoucherDetail5"
+            }
+          },
+          "Service": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "Approved": {
+            "type": "boolean"
+          },
+          "DeferEntry": {
+            "type": "boolean"
+          },
+          "PaymentTypeId": {
+            "type": "string"
+          },
+          "PaidAmount": {
+            "type": "string"
+          },
+          "CashDrawerId": {
+            "type": "string"
+          },
+          "IsPosExpanceVoucher": {
+            "type": "boolean"
+          },
+          "Prepaid": {
+            "type": "string"
+          },
+          "CollectionBookId": {
+            "type": "string"
+          },
+          "CollecterId": {
+            "type": "string"
+          },
+          "CollectionNumber": {
+            "type": "string"
+          },
+          "CheeckBookID": {
+            "type": "string"
+          },
+          "DueDate": {
+            "type": "string"
+          },
+          "ReceiptID": {
+            "type": "string"
+          },
+          "InvoiceInstallmentsDetailsId": {
+            "type": "string"
+          },
+          "SubsidaryID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Code": {
+            "type": "string"
+          },
+          "VoucherTypeID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "VouhcerDate": {
+            "type": "string"
+          },
+          "ReferanceNo": {
+            "type": "string"
+          },
+          "Memo": {
+            "type": "string"
+          },
+          "Beneficiary": {
+            "type": "string"
+          },
+          "BankName": {
+            "type": "string"
+          },
+          "CheckNumber": {
+            "type": "string"
+          },
+          "SubContractorContractCode": {
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SubContractorContractCode"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          }
+        },
+        "example": {
+          "ID": 396721,
+          "BranchID": 46,
+          "Posted": false,
+          "IsActive": true,
+          "CurrencyID": 42,
+          "WorkItemCode": {},
+          "ExchangeRate": "1.000000000",
+          "VoucherDetails": [
+            {
+              "ID": 956213,
+              "VoucherID": 396721,
+              "AccountNoID": 9904,
+              "Debit": 0,
+              "Credit": "100.000",
+              "DebitForeign": 0,
+              "CreditForeign": "100.000",
+              "IsActive": true,
+              "Reconciled": false,
+              "Cleared": false,
+              "Accountcode": "",
+              "Header": true,
+              "accountName": "الصندوق الرئيسي",
+              "Memo": "",
+              "isMemoEdit": false,
+              "Order": 0
+            },
+            {
+              "ID": 956214,
+              "VoucherID": 396721,
+              "AccountNoID": 14849,
+              "Debit": "100.000",
+              "Credit": 0,
+              "DebitForeign": "100.000",
+              "CreditForeign": 0,
+              "IsActive": true,
+              "Reconciled": false,
+              "Cleared": false,
+              "Accountcode": "",
+              "Header": false,
+              "accountName": "صندوق فرعى",
+              "Memo": "",
+              "isMemoEdit": false,
+              "Order": 1
+            }
+          ],
+          "Service": [],
+          "links": [],
+          "Approved": false,
+          "DeferEntry": false,
+          "IsPosExpanceVoucher": false,
+          "CollectionNumber": "",
+          "DueDate": "2023-02-20",
+          "SubsidaryID": 1,
+          "Code": "10411122041111182",
+          "VoucherTypeID": 4,
+          "VouhcerDate": "2023-02-20",
+          "ReferanceNo": "",
+          "Memo": "",
+          "Beneficiary": "صندوق فرعى",
+          "BankName": "",
+          "CheckNumber": "",
+          "SubContractorContractCode": {}
+        }
+      },
+      "VoucherDetail5": {
+        "title": "VoucherDetail5",
+        "required": [
+          "AccountNoID",
+          "Accountcode",
+          "ClassID",
+          "Cleared",
+          "CostcenterID",
+          "Credit",
+          "CreditForeign",
+          "Debit",
+          "DebitForeign",
+          "DepartmentID",
+          "DivisionID",
+          "Header",
+          "ID",
+          "IsActive",
+          "LocationID",
+          "Memo",
+          "Order",
+          "Reconciled",
+          "VoucherID",
+          "accountName",
+          "isMemoEdit"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "VoucherID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "CostcenterID": {
+            "type": "string"
+          },
+          "AccountNoID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Debit": {
+            "type": "object"
+          },
+          "Credit": {
+            "type": "object"
+          },
+          "DebitForeign": {
+            "type": "object"
+          },
+          "CreditForeign": {
+            "type": "object"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "LocationID": {
+            "type": "string"
+          },
+          "DepartmentID": {
+            "type": "string"
+          },
+          "ClassID": {
+            "type": "string"
+          },
+          "Reconciled": {
+            "type": "boolean"
+          },
+          "Cleared": {
+            "type": "boolean"
+          },
+          "Accountcode": {
+            "type": "string"
+          },
+          "Header": {
+            "type": "boolean"
+          },
+          "DivisionID": {
+            "type": "string"
+          },
+          "accountName": {
+            "type": "string"
+          },
+          "Memo": {
+            "type": "string"
+          },
+          "isMemoEdit": {
+            "type": "boolean"
+          },
+          "Order": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "ID": 956213,
+          "VoucherID": 396721,
+          "AccountNoID": 9904,
+          "Debit": 0,
+          "Credit": "100.000",
+          "DebitForeign": 0,
+          "CreditForeign": "100.000",
+          "IsActive": true,
+          "Reconciled": false,
+          "Cleared": false,
+          "Accountcode": "",
+          "Header": true,
+          "accountName": "الصندوق الرئيسي",
+          "Memo": "",
+          "isMemoEdit": false,
+          "Order": 0
+        }
+      },
+      "InsertCheckVoucherRequest": {
+        "title": "InsertCheckVoucherRequest",
+        "required": [
+          "Approved",
+          "BranchID",
+          "CashDrawerId",
+          "CheckFormType",
+          "CheeckBookID",
+          "ChequeBookID",
+          "ChequeDueDate",
+          "ChequeNumber",
+          "ClassificationCategoryID",
+          "Code",
+          "CollecterId",
+          "CollectionBookId",
+          "CollectionNumber",
+          "CurrencyID",
+          "DeferEntry",
+          "DueDate",
+          "ExchangeRate",
+          "ID",
+          "InvoiceInstallmentsDetailsId",
+          "IsActive",
+          "IsPosExpanceVoucher",
+          "PaidAmount",
+          "PaymentTypeId",
+          "Posted",
+          "Prepaid",
+          "ReceiptID",
+          "Service",
+          "SubContractorContractCode",
+          "SubContractorContractID",
+          "SubsidaryID",
+          "VoucherDetails",
+          "VoucherTypeID",
+          "VouhcerDate",
+          "WorkItemCode",
+          "WorkItemID",
+          "actualbalance",
+          "beneficiary",
+          "componentType",
+          "links",
+          "memo",
+          "referenceNo"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "BranchID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Posted": {
+            "type": "boolean"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "CurrencyID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ClassificationCategoryID": {
+            "type": "string"
+          },
+          "WorkItemID": {
+            "type": "string"
+          },
+          "WorkItemCode": {
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/WorkItemCode"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          },
+          "SubContractorContractID": {
+            "type": "string"
+          },
+          "ExchangeRate": {
+            "type": "string"
+          },
+          "VoucherDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VoucherDetail6"
+            }
+          },
+          "Service": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "Approved": {
+            "type": "boolean"
+          },
+          "DeferEntry": {
+            "type": "boolean"
+          },
+          "PaymentTypeId": {
+            "type": "string"
+          },
+          "PaidAmount": {
+            "type": "string"
+          },
+          "CashDrawerId": {
+            "type": "string"
+          },
+          "IsPosExpanceVoucher": {
+            "type": "boolean"
+          },
+          "Prepaid": {
+            "type": "string"
+          },
+          "CollectionBookId": {
+            "type": "string"
+          },
+          "CollecterId": {
+            "type": "string"
+          },
+          "CollectionNumber": {
+            "type": "string"
+          },
+          "CheeckBookID": {
+            "type": "string"
+          },
+          "DueDate": {
+            "type": "string"
+          },
+          "ReceiptID": {
+            "type": "string"
+          },
+          "InvoiceInstallmentsDetailsId": {
+            "type": "string"
+          },
+          "componentType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "SubsidaryID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "CheckFormType": {
+            "type": "string"
+          },
+          "Code": {
+            "type": "string"
+          },
+          "VouhcerDate": {
+            "type": "string"
+          },
+          "ChequeBookID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "actualbalance": {
+            "type": "string"
+          },
+          "memo": {
+            "type": "string"
+          },
+          "referenceNo": {
+            "type": "string"
+          },
+          "SubContractorContractCode": {
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SubContractorContractCode"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          },
+          "ChequeNumber": {
+            "type": "string"
+          },
+          "ChequeDueDate": {
+            "type": "string"
+          },
+          "beneficiary": {
+            "type": "string"
+          },
+          "VoucherTypeID": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "VoucherDetail6": {
+        "title": "VoucherDetail6",
+        "required": [
+          "AccountNoID",
+          "Accountcode",
+          "ClassID",
+          "Cleared",
+          "CostcenterID",
+          "Credit",
+          "CreditForeign",
+          "Debit",
+          "DebitForeign",
+          "DepartmentID",
+          "DivisionID",
+          "Header",
+          "ID",
+          "IsActive",
+          "LocationID",
+          "Memo",
+          "Order",
+          "Reconciled",
+          "VoucherID",
+          "accountName",
+          "accountNo",
+          "referenceNo",
+          "referenceNoDetails"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "VoucherID": {
+            "type": "string"
+          },
+          "CostcenterID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "AccountNoID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Debit": {
+            "type": "object"
+          },
+          "Credit": {
+            "type": "object"
+          },
+          "DebitForeign": {
+            "type": "string"
+          },
+          "CreditForeign": {
+            "type": "string"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "LocationID": {
+            "type": "string"
+          },
+          "DepartmentID": {
+            "type": "string"
+          },
+          "ClassID": {
+            "type": "string"
+          },
+          "Reconciled": {
+            "type": "boolean"
+          },
+          "Cleared": {
+            "type": "boolean"
+          },
+          "Accountcode": {
+            "type": "string"
+          },
+          "Header": {
+            "type": "boolean"
+          },
+          "DivisionID": {
+            "type": "string"
+          },
+          "Memo": {
+            "type": "string"
+          },
+          "accountNo": {
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/AccountNo"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          },
+          "accountName": {
+            "type": "string"
+          },
+          "referenceNo": {
+            "type": "string"
+          },
+          "referenceNoDetails": {
+            "type": "string"
+          },
+          "Order": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "AccountNo": {
+        "title": "AccountNo",
+        "required": [
+          "accountid",
+          "code"
+        ],
+        "type": "object",
+        "properties": {
+          "accountid": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "code": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "accountid": 9927,
+          "code": "11010200201"
+        }
+      },
+      "UpdateCheckVoucherRequest": {
+        "title": "UpdateCheckVoucherRequest",
+        "required": [
+          "Approved",
+          "BranchID",
+          "CashDrawerId",
+          "CheckFormType",
+          "CheeckBookID",
+          "ChequeBookID",
+          "ChequeDueDate",
+          "ChequeNumber",
+          "ClassificationCategoryID",
+          "Code",
+          "CollecterId",
+          "CollectionBookId",
+          "CollectionNumber",
+          "CurrencyID",
+          "DeferEntry",
+          "DueDate",
+          "ExchangeRate",
+          "ID",
+          "InvoiceInstallmentsDetailsId",
+          "IsActive",
+          "IsPosExpanceVoucher",
+          "PaidAmount",
+          "PaymentTypeId",
+          "Posted",
+          "Prepaid",
+          "ReceiptID",
+          "Service",
+          "SubContractorContractCode",
+          "SubContractorContractID",
+          "SubsidaryID",
+          "VoucherDetails",
+          "VoucherTypeID",
+          "VouhcerDate",
+          "WorkItemCode",
+          "WorkItemID",
+          "actualbalance",
+          "beneficiary",
+          "componentType",
+          "links",
+          "memo",
+          "referenceNo"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "BranchID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Posted": {
+            "type": "boolean"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "CurrencyID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ClassificationCategoryID": {
+            "type": "string"
+          },
+          "WorkItemID": {
+            "type": "string"
+          },
+          "WorkItemCode": {
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/WorkItemCode"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          },
+          "SubContractorContractID": {
+            "type": "string"
+          },
+          "ExchangeRate": {
+            "type": "string"
+          },
+          "VoucherDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VoucherDetail6"
+            }
+          },
+          "Service": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "Approved": {
+            "type": "boolean"
+          },
+          "DeferEntry": {
+            "type": "boolean"
+          },
+          "PaymentTypeId": {
+            "type": "string"
+          },
+          "PaidAmount": {
+            "type": "string"
+          },
+          "CashDrawerId": {
+            "type": "string"
+          },
+          "IsPosExpanceVoucher": {
+            "type": "boolean"
+          },
+          "Prepaid": {
+            "type": "string"
+          },
+          "CollectionBookId": {
+            "type": "string"
+          },
+          "CollecterId": {
+            "type": "string"
+          },
+          "CollectionNumber": {
+            "type": "string"
+          },
+          "CheeckBookID": {
+            "type": "string"
+          },
+          "DueDate": {
+            "type": "string"
+          },
+          "ReceiptID": {
+            "type": "string"
+          },
+          "InvoiceInstallmentsDetailsId": {
+            "type": "string"
+          },
+          "componentType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "SubsidaryID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "CheckFormType": {
+            "type": "string"
+          },
+          "Code": {
+            "type": "string"
+          },
+          "VouhcerDate": {
+            "type": "string"
+          },
+          "ChequeBookID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "actualbalance": {
+            "type": "string"
+          },
+          "memo": {
+            "type": "string"
+          },
+          "referenceNo": {
+            "type": "string"
+          },
+          "SubContractorContractCode": {
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SubContractorContractCode"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          },
+          "ChequeNumber": {
+            "type": "string"
+          },
+          "ChequeDueDate": {
+            "type": "string"
+          },
+          "beneficiary": {
+            "type": "string"
+          },
+          "VoucherTypeID": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "InsertMoneyTransferVoucherRequest": {
+        "title": "InsertMoneyTransferVoucherRequest",
+        "required": [
+          "Approved",
+          "BanckCompanyName",
+          "BranchID",
+          "CashDrawerId",
+          "CheeckBookID",
+          "ClassificationCategoryID",
+          "Code",
+          "CollecterId",
+          "CollectionBookId",
+          "CollectionNumber",
+          "CurrencyID",
+          "DeferEntry",
+          "DueDate",
+          "ExchangeRate",
+          "ID",
+          "InvoiceInstallmentsDetailsId",
+          "IsActive",
+          "IsPosExpanceVoucher",
+          "PaidAmount",
+          "PaymentMethodID",
+          "PaymentTypeId",
+          "Posted",
+          "Prepaid",
+          "ReceiptID",
+          "Service",
+          "SubContractorContractCode",
+          "SubContractorContractID",
+          "SubsidaryID",
+          "TransactionIntermediaryID",
+          "TransactionTypeID",
+          "TransferFeeID",
+          "TransferFormType",
+          "TransferTypeID",
+          "VoucherDetails",
+          "VoucherTypeID",
+          "VouhcerDate",
+          "WorkItemCode",
+          "WorkItemID",
+          "beneficiary",
+          "componentType",
+          "costCenter",
+          "links",
+          "memo",
+          "referenceNo"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "BranchID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Posted": {
+            "type": "boolean"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "CurrencyID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ClassificationCategoryID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "WorkItemID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "WorkItemCode": {
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/WorkItemCode4"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          },
+          "SubContractorContractID": {
+            "type": "string"
+          },
+          "ExchangeRate": {
+            "type": "string"
+          },
+          "VoucherDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VoucherDetail8"
+            }
+          },
+          "Service": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "Approved": {
+            "type": "boolean"
+          },
+          "DeferEntry": {
+            "type": "boolean"
+          },
+          "PaymentTypeId": {
+            "type": "string"
+          },
+          "PaidAmount": {
+            "type": "string"
+          },
+          "CashDrawerId": {
+            "type": "string"
+          },
+          "IsPosExpanceVoucher": {
+            "type": "boolean"
+          },
+          "Prepaid": {
+            "type": "string"
+          },
+          "CollectionBookId": {
+            "type": "string"
+          },
+          "CollecterId": {
+            "type": "string"
+          },
+          "CollectionNumber": {
+            "type": "string"
+          },
+          "CheeckBookID": {
+            "type": "string"
+          },
+          "DueDate": {
+            "type": "string"
+          },
+          "ReceiptID": {
+            "type": "string"
+          },
+          "InvoiceInstallmentsDetailsId": {
+            "type": "string"
+          },
+          "componentType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "SubsidaryID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "TransferFormType": {
+            "type": "string"
+          },
+          "Code": {
+            "type": "string"
+          },
+          "VouhcerDate": {
+            "type": "string"
+          },
+          "memo": {
+            "type": "string"
+          },
+          "referenceNo": {
+            "type": "string"
+          },
+          "TransferTypeID": {
+            "type": "string"
+          },
+          "TransactionIntermediaryID": {
+            "type": "string"
+          },
+          "BanckCompanyName": {
+            "type": "string"
+          },
+          "TransactionTypeID": {
+            "type": "string"
+          },
+          "PaymentMethodID": {
+            "type": "string"
+          },
+          "TransferFeeID": {
+            "type": "string"
+          },
+          "SubContractorContractCode": {
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SubContractorContractCode"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          },
+          "costCenter": {
+            "type": "string"
+          },
+          "beneficiary": {
+            "type": "string"
+          },
+          "VoucherTypeID": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "ID": 0,
+          "BranchID": 46,
+          "Posted": false,
+          "IsActive": true,
+          "CurrencyID": 42,
+          "ClassificationCategoryID": 5,
+          "WorkItemID": 39,
+          "WorkItemCode": {
+            "contract_no": 16
+          },
+          "ExchangeRate": "1.000000000",
+          "VoucherDetails": [
+            {
+              "ID": 0,
+              "AccountNoID": 9924,
+              "Debit": 1,
+              "DebitForeign": "1.000",
+              "CreditForeign": 0,
+              "IsActive": true,
+              "Reconciled": false,
+              "Cleared": false,
+              "Accountcode": "",
+              "Header": true,
+              "debit": 1,
+              "credit": 0,
+              "accountNo": {
+                "accountid": 9924,
+                "code": "11010200101"
+              },
+              "accountNoID": 9924,
+              "accountName": "البنك التجاري /4027681022",
+              "Order": 0
+            }
+          ],
+          "Service": [],
+          "links": [],
+          "Approved": false,
+          "DeferEntry": false,
+          "IsPosExpanceVoucher": false,
+          "CollectionNumber": "",
+          "componentType": 2,
+          "SubsidaryID": 1,
+          "TransferFormType": "IncomingTransfer",
+          "Code": "6",
+          "VouhcerDate": "2023-01-15",
+          "memo": "  استلام الدفعة المقدمة من العميل شــــركة  البيضــــاء",
+          "SubContractorContractCode": {},
+          "beneficiary": "شــــركة / المخــــازن البيضــــاء ذ-م-م",
+          "VoucherTypeID": 20
+        }
+      },
+      "WorkItemCode4": {
+        "title": "WorkItemCode4",
+        "required": [
+          "contract_no"
+        ],
+        "type": "object",
+        "properties": {
+          "contract_no": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "contract_no": 16
+        }
+      },
+      "VoucherDetail8": {
+        "title": "VoucherDetail8",
+        "required": [
+          "AccountNoID",
+          "Accountcode",
+          "ClassID",
+          "Cleared",
+          "CostcenterID",
+          "Credit",
+          "CreditForeign",
+          "Debit",
+          "DebitForeign",
+          "DepartmentID",
+          "DivisionID",
+          "Header",
+          "ID",
+          "IsActive",
+          "LocationID",
+          "Memo",
+          "Order",
+          "Reconciled",
+          "VoucherID",
+          "accountName",
+          "accountNo",
+          "referenceNo"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "VoucherID": {
+            "type": "string"
+          },
+          "CostcenterID": {
+            "type": "string"
+          },
+          "AccountNoID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Debit": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Credit": {
+            "type": "string"
+          },
+          "DebitForeign": {
+            "type": "string"
+          },
+          "CreditForeign": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "LocationID": {
+            "type": "string"
+          },
+          "DepartmentID": {
+            "type": "string"
+          },
+          "ClassID": {
+            "type": "string"
+          },
+          "Reconciled": {
+            "type": "boolean"
+          },
+          "Cleared": {
+            "type": "boolean"
+          },
+          "Accountcode": {
+            "type": "string"
+          },
+          "Header": {
+            "type": "boolean"
+          },
+          "DivisionID": {
+            "type": "string"
+          },
+          "Memo": {
+            "type": "string"
+          },
+          "accountNo": {
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/AccountNo"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          },
+          "accountName": {
+            "type": "string"
+          },
+          "referenceNo": {
+            "type": "string"
+          },
+          "Order": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "ID": 0,
+          "AccountNoID": 9924,
+          "Debit": 1,
+          "DebitForeign": "1.000",
+          "CreditForeign": 0,
+          "IsActive": true,
+          "Reconciled": false,
+          "Cleared": false,
+          "Accountcode": "",
+          "Header": true,
+          "debit": 1,
+          "credit": 0,
+          "accountNo": {
+            "accountid": 9924,
+            "code": "11010200101"
+          },
+          "accountNoID": 9924,
+          "accountName": "البنك التجاري /4027681022",
+          "Order": 0
+        }
+      },
+      "UpdateMoneyTransferVoucherRequest": {
+        "title": "UpdateMoneyTransferVoucherRequest",
+        "required": [
+          "Approved",
+          "BanckCompanyName",
+          "BranchID",
+          "CashDrawerId",
+          "CheeckBookID",
+          "ClassificationCategoryID",
+          "Code",
+          "CollecterId",
+          "CollectionBookId",
+          "CollectionNumber",
+          "CurrencyID",
+          "DeferEntry",
+          "DueDate",
+          "ExchangeRate",
+          "ID",
+          "InvoiceInstallmentsDetailsId",
+          "IsActive",
+          "IsPosExpanceVoucher",
+          "PaidAmount",
+          "PaymentMethodID",
+          "PaymentTypeId",
+          "Posted",
+          "Prepaid",
+          "ReceiptID",
+          "Service",
+          "SubContractorContractCode",
+          "SubContractorContractID",
+          "SubsidaryID",
+          "TransactionIntermediaryID",
+          "TransactionTypeID",
+          "TransferFeeID",
+          "TransferFormType",
+          "TransferTypeID",
+          "VoucherDetails",
+          "VoucherTypeID",
+          "VouhcerDate",
+          "WorkItemCode",
+          "WorkItemID",
+          "beneficiary",
+          "componentType",
+          "costCenter",
+          "links",
+          "memo",
+          "referenceNo"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "BranchID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Posted": {
+            "type": "boolean"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "CurrencyID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ClassificationCategoryID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "WorkItemID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "WorkItemCode": {
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/WorkItemCode4"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          },
+          "SubContractorContractID": {
+            "type": "string"
+          },
+          "ExchangeRate": {
+            "type": "string"
+          },
+          "VoucherDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VoucherDetail8"
+            }
+          },
+          "Service": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "Approved": {
+            "type": "boolean"
+          },
+          "DeferEntry": {
+            "type": "boolean"
+          },
+          "PaymentTypeId": {
+            "type": "string"
+          },
+          "PaidAmount": {
+            "type": "string"
+          },
+          "CashDrawerId": {
+            "type": "string"
+          },
+          "IsPosExpanceVoucher": {
+            "type": "boolean"
+          },
+          "Prepaid": {
+            "type": "string"
+          },
+          "CollectionBookId": {
+            "type": "string"
+          },
+          "CollecterId": {
+            "type": "string"
+          },
+          "CollectionNumber": {
+            "type": "string"
+          },
+          "CheeckBookID": {
+            "type": "string"
+          },
+          "DueDate": {
+            "type": "string"
+          },
+          "ReceiptID": {
+            "type": "string"
+          },
+          "InvoiceInstallmentsDetailsId": {
+            "type": "string"
+          },
+          "componentType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "SubsidaryID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "TransferFormType": {
+            "type": "string"
+          },
+          "Code": {
+            "type": "string"
+          },
+          "VouhcerDate": {
+            "type": "string"
+          },
+          "memo": {
+            "type": "string"
+          },
+          "referenceNo": {
+            "type": "string"
+          },
+          "TransferTypeID": {
+            "type": "string"
+          },
+          "TransactionIntermediaryID": {
+            "type": "string"
+          },
+          "BanckCompanyName": {
+            "type": "string"
+          },
+          "TransactionTypeID": {
+            "type": "string"
+          },
+          "PaymentMethodID": {
+            "type": "string"
+          },
+          "TransferFeeID": {
+            "type": "string"
+          },
+          "SubContractorContractCode": {
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SubContractorContractCode"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          },
+          "costCenter": {
+            "type": "string"
+          },
+          "beneficiary": {
+            "type": "string"
+          },
+          "VoucherTypeID": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "ID": 396574,
+          "BranchID": 46,
+          "Posted": false,
+          "IsActive": true,
+          "CurrencyID": 42,
+          "ClassificationCategoryID": 5,
+          "WorkItemID": 39,
+          "WorkItemCode": {
+            "contract_no": 16
+          },
+          "ExchangeRate": "1.000000000",
+          "VoucherDetails": [
+            {
+              "ID": 955829,
+              "AccountNoID": 9924,
+              "Debit": 1,
+              "DebitForeign": "1.000",
+              "CreditForeign": 0,
+              "IsActive": true,
+              "Reconciled": false,
+              "Cleared": false,
+              "Accountcode": "",
+              "Header": true,
+              "debit": 1,
+              "credit": 0,
+              "accountNo": {
+                "accountid": 9924,
+                "code": "11010200101"
+              },
+              "accountNoID": 9924,
+              "accountName": "البنك التجاري /4027681022",
+              "Order": 0
+            }
+          ],
+          "Service": [],
+          "links": [],
+          "Approved": false,
+          "DeferEntry": false,
+          "IsPosExpanceVoucher": false,
+          "CollectionNumber": "",
+          "componentType": 2,
+          "SubsidaryID": 1,
+          "TransferFormType": "IncomingTransfer",
+          "Code": "6",
+          "VouhcerDate": "2023-01-15",
+          "memo": "  استلام الدفعة المقدمة من العميل شــــركة  البيضــــاء",
+          "SubContractorContractCode": {},
+          "beneficiary": "شــــركة / المخــــازن البيضــــاء ذ-م-م",
+          "VoucherTypeID": 20
+        }
+      },
+      "insertCatchASiteVoucherForThirdPartyRequest": {
+        "title": "insertCatchASiteVoucherForThirdPartyRequest",
+        "required": [
+          "Approved",
+          "BankName",
+          "Beneficiary",
+          "BranchID",
+          "CashDrawerId",
+          "CheckNumber",
+          "CheeckBookID",
+          "ClassificationCategoryID",
+          "Code",
+          "CollecterId",
+          "CollectionBookId",
+          "CollectionNumber",
+          "CurrencyID",
+          "DeferEntry",
+          "DueDate",
+          "ExchangeRate",
+          "ID",
+          "InvoiceInstallmentsDetailsId",
+          "IsActive",
+          "IsPosExpanceVoucher",
+          "Memo",
+          "PaidAmount",
+          "PaymentTypeId",
+          "Posted",
+          "Prepaid",
+          "ReceiptID",
+          "ReferanceNo",
+          "Service",
+          "SubContractorContractCode",
+          "SubContractorContractID",
+          "SubsidaryID",
+          "VoucherDetails",
+          "VoucherTypeID",
+          "VouhcerDate",
+          "WorkItemCode",
+          "WorkItemID",
+          "links"
+        ],
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "BranchID": {
+            "type": "string"
+          },
+          "Posted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "CurrencyID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ClassificationCategoryID": {
+            "type": "string"
+          },
+          "WorkItemID": {
+            "type": "string"
+          },
+          "WorkItemCode": {
+            "type": "string"
+          },
+          "SubContractorContractID": {
+            "type": "string"
+          },
+          "ExchangeRate": {
+            "type": "string"
+          },
+          "VoucherDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VoucherDetail4"
+            }
+          },
+          "Service": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "Approved": {
+            "type": "boolean"
+          },
+          "DeferEntry": {
+            "type": "boolean"
+          },
+          "PaymentTypeId": {
+            "type": "string"
+          },
+          "PaidAmount": {
+            "type": "string"
+          },
+          "CashDrawerId": {
+            "type": "string"
+          },
+          "IsPosExpanceVoucher": {
+            "type": "boolean"
+          },
+          "Prepaid": {
+            "type": "string"
+          },
+          "CollectionBookId": {
+            "type": "string"
+          },
+          "CollecterId": {
+            "type": "string"
+          },
+          "CollectionNumber": {
+            "type": "string"
+          },
+          "CheeckBookID": {
+            "type": "string"
+          },
+          "DueDate": {
+            "type": "string"
+          },
+          "ReceiptID": {
+            "type": "string"
+          },
+          "InvoiceInstallmentsDetailsId": {
+            "type": "string"
+          },
+          "SubsidaryID": {
+            "type": "string"
+          },
+          "Code": {
+            "type": "string"
+          },
+          "VoucherTypeID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "VouhcerDate": {
+            "type": "string"
+          },
+          "ReferanceNo": {
+            "type": "string"
+          },
+          "Memo": {
+            "type": "string"
+          },
+          "Beneficiary": {
+            "type": "string"
+          },
+          "BankName": {
+            "type": "string"
+          },
+          "CheckNumber": {
+            "type": "string"
+          },
+          "SubContractorContractCode": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "ID": 0,
+          "BranchID": "46",
+          "Posted": 1,
+          "IsActive": true,
+          "CurrencyID": 42,
+          "ExchangeRate": "1.000000000",
+          "VoucherDetails": [
+            {
+              "AccountNoID": 9904,
+              "Debit": 0,
+              "Credit": "100.000",
+              "DebitForeign": 0,
+              "CreditForeign": "0.000",
+              "IsActive": true,
+              "Reconciled": false,
+              "Cleared": false,
+              "Accountcode": "",
+              "Header": false,
+              "accountName": "الصندوق الرئيسي",
+              "Memo": "",
+              "isMemoEdit": false,
+              "Order": 0
+            },
+            {
+              "AccountNoID": 9882,
+              "Debit": "100.000",
+              "Credit": 0,
+              "DebitForeign": "0.000",
+              "CreditForeign": 0,
+              "IsActive": true,
+              "Reconciled": false,
+              "Cleared": false,
+              "Accountcode": "",
+              "Header": false,
+              "accountName": "صندوق فرعى",
+              "Memo": "test nemaa",
+              "isMemoEdit": false,
+              "Order": 1
+            }
+          ],
+          "Service": [],
+          "links": [],
+          "Approved": false,
+          "DeferEntry": false,
+          "IsPosExpanceVoucher": false,
+          "CollectionNumber": "",
+          "DueDate": "2023-10-20",
+          "SubsidaryID": "1",
+          "Code": "10411122041111180",
+          "VoucherTypeID": 4,
+          "VouhcerDate": "2023-10-20",
+          "ReferanceNo": "",
+          "Memo": "9882",
+          "Beneficiary": "صندوق فرعى",
+          "BankName": "",
+          "CheckNumber": ""
+        }
+      }
+    }
+  },
+  "x-original-swagger-version": "2.0"
+}
